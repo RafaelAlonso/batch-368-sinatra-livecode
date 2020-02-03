@@ -1,0 +1,15 @@
+<h1>Our restaurants!</h1>
+
+<form action="/sendform" method="post">
+  Name
+  <input type="text" name="name">
+  Address
+  <input type="text" name="address">
+  Specialty
+  <input type="text" name="specialty">
+  <input type="submit">
+</form>
+
+<% @restaurants.each do |restaurant| %>
+  <h2><a href="/algumacoisa/<%= restaurant.id %>"><%= restaurant.name %></a></h2>
+<% end %>
